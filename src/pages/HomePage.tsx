@@ -1,9 +1,22 @@
-import React from 'react';
+import React from "react";
+
+import { Button, VStack } from "@chakra-ui/react";
+import { Description } from "../components/Description";
+import { Header } from "../components/Header";
+
+const dadosDoSite = {
+  title: "Cliente 2"
+};
 
 function HomePage() {
   return (
     <div className="App">
-        <h1>Home Page</h1>
+      <VStack>
+        <Description />
+        <Header title={dadosDoSite.title}>
+          <Button>Menu</Button>
+        </Header>
+      </VStack>
     </div>
   );
 }
